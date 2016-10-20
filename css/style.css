@@ -1,0 +1,92 @@
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+[class*="col-"] {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+h1 {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    margin-top: 0px;
+    font-size: 40px;
+}
+
+small {
+    display: block;
+    margin: 0 auto;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    max-width: 800px;
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ====================================================================== */
+
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0px;
+    height: 90px;
+    background-color: white;
+    border: 0;
+}
+
+.navbar-nav > li > a {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+    height: 90px;
+}
+
+
+#hover-turquoise:hover {background-color: #19B5A1;}
+#hover-green:hover {background-color: #7FBB49;}
+#hover-violet:hover {background-color: #B371A2;}
+#hover-cyan:hover {background-color: #76C7C3;}
+#hover-yellow:hover {background-color: #FFC04C;}
+#hover-blue:hover {background-color: #53BFD5;}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #111;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+
+
+.navbar-right {
+    margin-right: 65px;    
+}
+
+
+/* ==========================================================================
+   CAROUSSEL
+   ====================================================================== */
+.item {
+    height: 600px;
+}
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   INTRO
+   ====================================================================== */
+
+.introduction {
+    height: 330px;
+    background-color: #54C0D6;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
