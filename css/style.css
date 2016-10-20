@@ -2,9 +2,14 @@
    BASE STYLES
    ========================================================================== */
 
+#favicon {
+    height: 20px;
+    width: 20px;
+}
+
 [class*="col-"] {
-	padding-right: 0px;
-	padding-left: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 h1 {
@@ -27,6 +32,19 @@ small {
     font-size: 18px;
 }
 
+p {
+    font-family: "Raleway", sans-serif;
+    color: #111;
+    font-weight: 300;
+    max-width: 800px;
+    font-size: 17px;
+    line-height: 35px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    padding-right: 10px;
+}
+
+
 /* ==========================================================================
    NAVBAR
    ====================================================================== */
@@ -34,7 +52,7 @@ small {
 .navbar {
     margin-bottom: 0px;
     border-radius: 0px;
-    height: 90px;
+    height: 100px;
     background-color: white;
     border: 0;
 }
@@ -44,16 +62,38 @@ small {
     padding-left: 30px;
     padding-right: 30px;
     color: black;
-    height: 90px;
+    height: 100px;
 }
 
+.navbar-header img {
+    height: 75px;
+    width: 75px;
+    margin-left: 65px;
+}
 
-#hover-turquoise:hover {background-color: #19B5A1;}
-#hover-green:hover {background-color: #7FBB49;}
-#hover-violet:hover {background-color: #B371A2;}
-#hover-cyan:hover {background-color: #76C7C3;}
-#hover-yellow:hover {background-color: #FFC04C;}
-#hover-blue:hover {background-color: #53BFD5;}
+#hover-turquoise:hover {
+    background-color: #19B5A1;
+}
+
+#hover-green:hover {
+    background-color: #7FBB49;
+}
+
+#hover-violet:hover {
+    background-color: #B371A2;
+}
+
+#hover-cyan:hover {
+    background-color: #76C7C3;
+}
+
+#hover-yellow:hover {
+    background-color: #FFC04C;
+}
+
+#hover-blue:hover {
+    background-color: #53BFD5;
+}
 
 .navbar-inverse .navbar-nav > li > a {
     color: #111;
@@ -61,19 +101,24 @@ small {
     font-weight: 700;
 }
 
-
 .navbar-right {
-    margin-right: 65px;    
+    margin-right: 65px;
 }
 
 
 /* ==========================================================================
    CAROUSSEL
    ====================================================================== */
+
 .item {
     height: 600px;
 }
-.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
     width: 100%;
 }
 
@@ -89,4 +134,42 @@ small {
     flex-direction: column;
     align-content: center;
     justify-content: center;
+}
+
+
+/* ==========================================================================
+   PLAY
+   ====================================================================== */
+
+.play {
+    height: 540px;
+    background-color: white;
+}
+
+.description-play a {
+    cursor: pointer;
+}
+
+.description-play img {
+    height: 40px;
+    border-radius: 5px;
+
+}
+
+.description-play a:hover {
+    opacity: 0.7;
+}
+
+.description-play:first-child {
+    margin-top: 150px;
+}
+
+.description-play a:last-child {
+    margin-left: 15px;
+}
+
+.img-play img {
+    margin-top: 65px;
+    height: 475px;
+    width: 350px;
 }
