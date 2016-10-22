@@ -110,10 +110,6 @@ p {
    CAROUSSEL
    ====================================================================== */
 
-.item {
-    height: 600px;
-}
-
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -142,18 +138,17 @@ p {
    ====================================================================== */
 
 .play {
-    height: 540px;
     background-color: white;
 }
 
 .description-play a {
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .description-play img {
     height: 40px;
     border-radius: 5px;
-
 }
 
 .description-play a:hover {
@@ -162,14 +157,93 @@ p {
 
 .description-play:first-child {
     margin-top: 150px;
-}
-
-.description-play a:last-child {
-    margin-left: 15px;
+    max-width: 80%;
+    margin: 150px auto 0 auto;
 }
 
 .img-play img {
-    margin-top: 65px;
-    height: 475px;
-    width: 350px;
+    height: 450px;
+    width: 300px;
+    display: block;
+    margin: 100px auto 0px auto;
+}
+
+.play2 p {
+    color: white;
+}
+
+.play2 {
+    height: 600px;
+    background-image: url(../img/TwoDots_space_bkgd.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.play3 {
+    height: 600px;
+    background-image: url(../img/dotsAndCoBackground.png);
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #ACE3D6;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ====================================================================== */
+
+@media screen and (max-width: 1024px) {
+    .introduction small {
+        font-size: 1.8em;
+        margin-top: 20px;
+    }
+    .play2 {
+        height: 1100px;
+        background-image: url(../img/TwoDots_space_bkgd-small.png);
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    
+    .description-play:first-child {
+        margin-top: 100px;
+        margin: 150px auto 50px 75px;
+    }
+    
+   
+    .description-play p {
+        width: 100%;
+        margin-bottom: 100px;
+        font-size: 1.7em;
+        line-height: 40px;
+    }
+    .margin-xs {
+        margin-bottom: 100px;
+    }
+    .description-play img {
+        height: 50px;
+        border-radius: 5px;
+    }
+    .play3 {
+        height: 1350px;
+        background-image: url(../img/homepage-dots-and-co-background-small.png);
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-color: #ACE3D6;
+    }
+    .img-play {
+        background-color: #4ACD67;
+        margin-top: 0px;
+    }
+    .img-play img {
+        height: 550px;
+        width: 350px;
+    }
+     .description-play2:first-child {
+        max-width: 100%;
+        margin: 475px auto 0 75px;
+    }
 }
