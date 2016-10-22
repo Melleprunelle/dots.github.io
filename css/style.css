@@ -105,6 +105,50 @@ p {
     margin-right: 65px;
 }
 
+.dropdown ul {
+    background-color: white;
+    width: 225px;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.dropdown img {
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 1px;
+    padding-right: 10px;
+}
+
+.ul-second a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #111;
+    text-transform: capitalize;
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li:hover {
+    background-color: whitesmoke;
+}
+
+ul.drop {
+    position: relative;
+    z-index: 500;
+    float: left;
+}
+
+ul.drop ul {
+    visibility: hidden;
+    position: absolute;
+}
+
+ul.drop li:hover > ul {
+    visibility: visible;
+}
+
 
 /* ==========================================================================
    CAROUSSEL
@@ -117,6 +161,8 @@ p {
 .carousel-inner > .item > a > img {
     width: 100%;
 }
+
+
 /* ==========================================================================
    INTRO
    ====================================================================== */
@@ -187,6 +233,70 @@ p {
     background-color: #ACE3D6;
 }
 
+/* ==========================================================================
+   ANIMATION
+   ====================================================================== */
+    
+.div-animation {
+    margin-top: 150px;
+}
+.animation {
+    width: 140px;
+	height: 125px;
+    display: block;
+}
+
+#emily-animation {
+    position: relative;
+	animation-name: emily;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	background-image: url("heart_white.png");
+	background-size: cover;
+	animation-duration: 10s;
+    animation-direction: alternate;
+    
+}
+
+#jack {
+    margin-left: 225px;
+    animation-name: img;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	background-image: url("heart_white.png");
+	background-size: cover;
+	animation-duration: 3s;
+    animation-direction: alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes img {
+    from {transform:rotate(0deg);} to {transform:rotate(10deg);}
+
+}
+
+/* Standard syntax */
+@keyframes img{
+   from {transform:rotate(0deg);} to {transform:rotate(10deg);}
+} 
+
+@-webkit-keyframes emily{
+     0%  {left:0px; top:0px;}
+    25%  {left:50px; top:0px;}
+    50%  {left:50px; top:0px;}
+    from {transform:rotate(0deg);} to {transform:rotate(10deg);}
+    75%  {left:0px; top:0px;}
+    100% {left:0px; top:0px;} 
+}
+
+@keyframes emily{
+     0%  {left:0px; top:0px;}
+    25%  {left:50px; top:0px;}
+    50%  {left:50px; top:0px;}
+    from {transform:rotate(0deg);} to {transform:rotate(10deg);}
+    75%  {left:0px; top:0px;}
+    100% {left:0px; top:0px;} 
+}
 
 /* ==========================================================================
    RESPONSIVE
@@ -204,16 +314,13 @@ p {
         background-repeat: no-repeat;
         background-position: top;
     }
-    
     .description-play:first-child {
         margin-top: 100px;
         margin: 150px auto 50px 75px;
     }
-    
     .margin-xs {
         padding-bottom: 100px;
     }
-    
     .margin-xs2 {
         padding-bottom: 400px;
     }
@@ -246,8 +353,11 @@ p {
         height: 550px;
         width: 350px;
     }
-     .description-play2:first-child {
+    .description-play2:first-child {
         max-width: 100%;
         margin: 475px auto 0 75px;
     }
+    .div-animation {
+    display: none;
+}
 }

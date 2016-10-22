@@ -6,14 +6,9 @@
     <title>Dots</title>
     <link rel="icon" type="image/svg" href="favicon.svg" />
 
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- SCRIPT -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
 
     <!-- TYPO -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,600,700" rel="stylesheet">
@@ -26,16 +21,32 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="Logotype"></a>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" id="hover-turquoise">GAMES</a></li>
-                <li><a href="#" id="hover-green">ABOUT</a></li>
-                <li><a href="#" id="hover-violet">JOBS</a></li>
-                <li><a href="#" id="hover-cyan">CONNECT</a></li>
-                <li><a href="#" id="hover-yellow">BLOGS</a></li>
-                <li><a href="#" id="hover-blue">SUPPORT</a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul id="nav" class="nav navbar-nav navbar-right drop">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="hover-turquoise">GAMES</a>
+                        <ul class="ul-second">
+                            <li><a href="#"><img src="img/dotsClassicIcon.png" alt="icon dots">Dots</a></li>
+                            <li><a href="#"><img src="img/picture.png" alt="icon dots">Two Dots</a></li>
+                            <li><a href="#"><img src="img/picture2.png" alt="icon dots">Dots et Co</a></li>
+                        </ul>
+                        </li>
+
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="hover-green">ABOUT</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="hover-violet">JOBS</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="hover-cyan">CONNECT</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="hover-yellow">BLOGS</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" id="hover-blue">SUPPORT</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -95,39 +106,46 @@
             <a href="" class="col-md-offset-2"><img src="img/twoDotsLogo@2x.png" alt=""></a>
             <p class="col-md-offset-2">Join two brave dots as they traverse arctic tundras, navigate fiery jungles, and plunge the ocean depths in this award-winning puzzle game. Connect colored dots to score points and complete objectives while sharpening your skills across 750+ levels—and uncover exciting new features along the way. ►</p>
             <div class="margin-xs">
-            <a href="#" class="col-md-offset-2">
-                <img src="img/appstore-icon-apple.svg" alt="AppleStore"></a>
-            <a href="#">
-                <img src="img/appstore-icon-google.svg" alt="GoogleStore"></a>
-            <a href="#">
-                <img src="img/appstore-icon-windows.svg" alt="windowsStore"></a>
-            <a href="#">
-                <img src="img/appstore-icon-amazon.svg" alt="AmazonStore"></a>
+                <a href="#" class="col-md-offset-2">
+                    <img src="img/appstore-icon-apple.svg" alt="AppleStore"></a>
+                <a href="#">
+                    <img src="img/appstore-icon-google.svg" alt="GoogleStore"></a>
+                <a href="#">
+                    <img src="img/appstore-icon-windows.svg" alt="windowsStore"></a>
+                <a href="#">
+                    <img src="img/appstore-icon-amazon.svg" alt="AmazonStore"></a>
             </div>
         </div>
 
-        <div class="col-md-6 img-play">
-<!--            <img class="col-md-5 col-md-offset-3" src="img/dotsClassic.gif" alt="présentation animée du jeu">-->
+        <div class="col-md-6">
+           <div class="col-md-offset-2 div-animation">
+            <img id="jack" class="animation" src="img/jackSpace@2x.png" alt="">
+            <img id="emily-animation" class="animation" src="img/emilySpace@2x.png" alt="">
+            </div>
         </div>
     </section>
-    
-     <!-- DOTS AND CO -->
+
+    <!-- DOTS AND CO -->
     <section class="play3 col-sm-12">
         <div class="description-play description-play2 col-md-6 col-xs-8 col-xs-offset-2">
             <a href="" class="col-md-offset-2"><img src="img/dotsAndCoLogo.png" alt=""></a>
             <p class="col-md-offset-2">Explore beautiful landscapes and embark on a visual journey by solving puzzles with magical companions that help you along the way. ►</p>
-            
+
             <div class="margin-xs2">
-            <a href="#" class="col-md-offset-2">
-                <img src="img/appstore-icon-apple.svg" alt="AppleStore">
-            </a>
-            <a href="#">
-                <img src="img/appstore-icon-google.svg" alt="GoogleStore">
-            </a>
+                <a href="#" class="col-md-offset-2">
+                    <img src="img/appstore-icon-apple.svg" alt="AppleStore">
+                </a>
+                <a href="#">
+                    <img src="img/appstore-icon-google.svg" alt="GoogleStore">
+                </a>
             </div>
         </div>
     </section>
-
 </body>
+
+<!-- SCRIPT -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </html>
