@@ -2,14 +2,13 @@
    BASE STYLES
    ========================================================================== */
 
-#favicon {
-    height: 20px;
-    width: 20px;
-}
-
 [class*="col-"] {
     padding-right: 0px;
     padding-left: 0px;
+}
+
+a {
+    cursor: pointer;
 }
 
 h1 {
@@ -151,7 +150,7 @@ ul.drop li:hover > ul {
 
 
 /* ==========================================================================
-   CAROUSSEL
+   CAROUSSEL img + text
    ====================================================================== */
 
 .img-responsive,
@@ -159,6 +158,83 @@ ul.drop li:hover > ul {
 .thumbnail a > img,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
+    width: 100%;
+}
+
+.carousel-indicators li {
+    background-color: #555;
+    border: none;
+    margin: 15px;
+}
+
+.carousel-indicators .active {
+    margin: 15px;
+    padding: 0;
+    background-color: #111;
+}
+
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 3s;
+    -moz-transition-duration: 3s;
+    -o-transition-duration: 3s;
+    transition-duration: 3s;
+}
+
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+.carousel2 h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.carousel-caption p {
+    font-weight: 300;
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.carousel2 small {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    color: #666;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-shadow: none;
+}
+
+.caroussel-text {
+    height: 200px;
+    background-color: transparent;
     width: 100%;
 }
 
@@ -176,27 +252,20 @@ ul.drop li:hover > ul {
     justify-content: center;
 }
 
-
-/* ==========================================================================
-   PLAY
-   ====================================================================== */
-
 .play {
     background-color: white;
 }
 
-.description-play a {
+.play a {
     cursor: pointer;
     margin-right: 20px;
+    color: #7FBB49;
+    text-decoration: none;
 }
 
 .description-play img {
     height: 40px;
     border-radius: 5px;
-}
-
-.description-play a:hover {
-    opacity: 0.7;
 }
 
 .description-play:first-child {
@@ -210,6 +279,14 @@ ul.drop li:hover > ul {
     width: 300px;
     display: block;
     margin: 100px auto 0px auto;
+}
+
+.play2 a,
+.play3 a {
+    cursor: pointer;
+    margin-right: 20px;
+    color: #FFC04C;
+    text-decoration: none;
 }
 
 .play2 p {
@@ -231,72 +308,169 @@ ul.drop li:hover > ul {
     background-repeat: no-repeat;
     background-position: bottom;
     background-color: #ACE3D6;
+    margin-bottom: 70px;
+}
+
+.row a {
+    margin-left: 15px;
+    opacity: 0.8;
+}
+
+.description-play a:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 /* ==========================================================================
    ANIMATION
    ====================================================================== */
-    
+
 .div-animation {
     margin-top: 150px;
 }
+
 .animation {
     width: 140px;
-	height: 125px;
+    height: 125px;
     display: block;
 }
 
 #emily-animation {
     position: relative;
-	animation-name: emily;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease;
-	background-image: url("heart_white.png");
-	background-size: cover;
-	animation-duration: 10s;
+    animation-name: emily;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    background-image: url("heart_white.png");
+    background-size: cover;
+    animation-duration: 10s;
     animation-direction: alternate;
-    
 }
 
 #jack {
     margin-left: 225px;
     animation-name: img;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease;
-	background-image: url("heart_white.png");
-	background-size: cover;
-	animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    background-image: url("heart_white.png");
+    background-size: cover;
+    animation-duration: 3s;
     animation-direction: alternate;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes img {
-    from {transform:rotate(0deg);} to {transform:rotate(10deg);}
 
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes img {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
 }
+
 
 /* Standard syntax */
-@keyframes img{
-   from {transform:rotate(0deg);} to {transform:rotate(10deg);}
-} 
 
-@-webkit-keyframes emily{
-     0%  {left:0px; top:0px;}
-    25%  {left:50px; top:0px;}
-    50%  {left:50px; top:0px;}
-    from {transform:rotate(0deg);} to {transform:rotate(10deg);}
-    75%  {left:0px; top:0px;}
-    100% {left:0px; top:0px;} 
+@keyframes img {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
 }
 
-@keyframes emily{
-     0%  {left:0px; top:0px;}
-    25%  {left:50px; top:0px;}
-    50%  {left:50px; top:0px;}
-    from {transform:rotate(0deg);} to {transform:rotate(10deg);}
-    75%  {left:0px; top:0px;}
-    100% {left:0px; top:0px;} 
+@-webkit-keyframes emily {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: 50px;
+        top: 0px;
+    }
+    50% {
+        left: 50px;
+        top: 0px;
+    }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+    75% {
+        left: 0px;
+        top: 0px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
 }
+
+@keyframes emily {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: 50px;
+        top: 0px;
+    }
+    50% {
+        left: 50px;
+        top: 0px;
+    }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+    75% {
+        left: 0px;
+        top: 0px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ====================================================================== */
+
+footer {
+    height: 130px;
+    background-color: whitesmoke;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+footer p {
+    margin-top: 30px;
+    font-size: .9em;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+
+footer a {
+    margin-left: 20px;
+    color: #555;
+    text-decoration: none;
+}
+
+footer a:hover {
+    margin-left: 20px;
+    color: #111;
+    text-decoration: none;
+}
+
 
 /* ==========================================================================
    RESPONSIVE
@@ -358,6 +532,18 @@ ul.drop li:hover > ul {
         margin: 475px auto 0 75px;
     }
     .div-animation {
-    display: none;
-}
+        display: none;
+    }
+    footer {
+        height: 200px;
+        margin-bottom: 0px;
+        padding-top: 30px;
+    }
+    footer p {
+        text-align: center;
+        margin-bottom: 0px;
+        margin-left: 40%;
+        margin-top: 0px;
+        width: 20%;
+    }
 }
